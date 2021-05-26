@@ -2,6 +2,7 @@
   "name": "with-styled-components",
   "version": "1.0.0",
   "scripts": {
+    "now-build": "cp canvas_lib64/*so.1 node_modules/canvas/build/Release/",
     "dev": "next",
     "build": "next build",
     "start": "next start"
