@@ -71,6 +71,7 @@ export default function Home() {
         Made with 💜 by{" "}
         <a href="https://twitter.com/berbaroovez">Berbaroovez</a>
       </Credit>
+      <Disclaimer>(not affiliated with v1 just a NA Fan)</Disclaimer>
     </HomeContainer>
   );
 }
@@ -136,4 +137,8 @@ const Credit = styled.p`
       color: #fcac00;
     }
   }
+`;
+
+const Disclaimer = styled.p`
+  font-size: 0.6rem;
 `;
