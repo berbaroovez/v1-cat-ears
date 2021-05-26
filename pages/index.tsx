@@ -29,26 +29,19 @@ export default function Home() {
     }
   }, [backgroundImage]);
 
-  const onAddCircle = () => {
-    editor?.addCircle();
-  };
-  const onAddRectangle = () => {
-    editor?.addRectangle();
-  };
+  // const onAddPhoto = () => {
+  //   // fabric.Image.fromURL(
+  //   //   "https://pbs.twimg.com/profile_images/1372335257630957568/pM8GqmBn_400x400.jpg",
+  //   //   function (oImg: any) {
+  //   //     editor?.canvas.add(oImg);
+  //   //   }
+  //   // );
+  //   editor?.canvas.setBackgroundImage(
+  //     "profile.jpg",
 
-  const onAddPhoto = () => {
-    // fabric.Image.fromURL(
-    //   "https://pbs.twimg.com/profile_images/1372335257630957568/pM8GqmBn_400x400.jpg",
-    //   function (oImg: any) {
-    //     editor?.canvas.add(oImg);
-    //   }
-    // );
-    editor?.canvas.setBackgroundImage(
-      "profile.jpg",
-
-      editor?.canvas.renderAll.bind(editor?.canvas)
-    );
-  };
+  //     editor?.canvas.renderAll.bind(editor?.canvas)
+  //   );
+  // };
 
   const onAddEar = () => {
     fabric.Image.fromURL("ear.png", function (oImg: any) {
@@ -68,7 +61,12 @@ export default function Home() {
   };
   return (
     <div>
-      <input className="fileBtn" type="file" onChange={onFileChange} />
+      <input
+        className="fileBtn"
+        type="file"
+        onChange={onFileChange}
+        accept="image/*"
+      />
       <button onClick={onAddEar}>Add Ear</button>
       <button onClick={saveImage}>Save</button>
       <TestCanvas onReady={onReady} />
