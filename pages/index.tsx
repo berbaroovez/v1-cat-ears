@@ -60,7 +60,7 @@ export default function Home() {
     tmpLink.click();
   };
   return (
-    <div>
+    <HomeContainer>
       <input
         className="fileBtn"
         type="file"
@@ -68,11 +68,21 @@ export default function Home() {
         accept="image/*"
       />
       <button onClick={onAddEar}>Add Ear</button>
-      <button onClick={saveImage}>Save</button>
+
       <TestCanvas onReady={onReady} />
-    </div>
+      <button onClick={saveImage}>Save</button>
+    </HomeContainer>
   );
 }
+
+const HomeContainer = styled.div`
+  display: grid;
+
+  justify-items: center;
+  button {
+    width: 200px;
+  }
+`;
 
 const TestCanvas = styled(FabricJSCanvas)`
   height: 400px;
