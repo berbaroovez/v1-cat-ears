@@ -2,7 +2,7 @@ import GlobalStyles from "../util/GlobalStyles";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import * as Fathom from "fathom-client";
-
+import Router from "next/router";
 import { useEffect } from "react";
 
 Router.events.on("routeChangeComplete", () => {
