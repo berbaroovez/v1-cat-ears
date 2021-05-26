@@ -2,22 +2,21 @@
   "name": "with-styled-components",
   "version": "1.0.0",
   "scripts": {
-    "now-build": "cp canvas_lib64/*so.1 node_modules/canvas/build/Release/",
+    
     "dev": "next",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.9",
+    "canvas": "^2.8.0",
     "fabric": "^4.5.0",
     "fabricjs-react": "^1.0.8",
     "jsdom": "^16.6.0",
-  
     "next": "latest",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.8.0",
-   
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
