@@ -22,6 +22,18 @@ dd {
   margin: 0;
 }
 
+body{
+  background: #9646fa;
+  
+
+font-family: aktiv-grotesk, sans-serif;
+
+font-weight: 500;
+
+font-style: normal;
+
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {

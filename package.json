@@ -13,6 +13,7 @@
     "fabricjs-react": "^1.0.8",
     "jsdom": "^16.6.0",
     "next": "latest",
+    "next-seo": "^4.24.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.8.0",
