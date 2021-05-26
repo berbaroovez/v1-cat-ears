@@ -32,6 +32,12 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <script
+            src="https://cdn.usefathom.com/script.js"
+            data-site="QROYLJXZ"
+            defer
+          ></script>
+
           <link
             rel="stylesheet"
             href="https://use.typekit.net/fpv6mbz.css"
