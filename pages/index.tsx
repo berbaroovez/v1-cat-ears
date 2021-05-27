@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { fabric } from "fabric";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 import Logo from "../components/logo";
+
+import { NextSeo } from "next-seo";
 export default function Home() {
   const { selectedObjects, editor, onReady } = useFabricJSEditor();
   const [backgroundImage, setBackgroundImage] = useState<string>("");
@@ -47,32 +49,51 @@ export default function Home() {
     tmpLink.click();
   };
   return (
-    <HomeContainer>
-      <Logo />
+    <>
+      <NextSeo
+        openGraph={{
+          type: "website",
+          url: "https://www.catearsforv1.com",
+          title: "Cat Ears for V1",
+          description:
+            "Add cat ears to your profile photo to support V1 in Valorant",
+          images: [
+            {
+              url: "https://www.catearsforv1.com/static/og-twitter.png",
+              width: 800,
+              height: 600,
+              alt: "An image that reads cat ears for v1",
+            },
+          ],
+        }}
+      />
+      <HomeContainer>
+        <Logo />
 
-      <h1>Add cat ears to your profile photo to support the V1 Boys</h1>
+        <h1>Add cat ears to your profile photo to support the V1 Boys</h1>
 
-      <label className="custom-file-upload">
-        <input
-          className="fileBtn"
-          type="file"
-          onChange={onFileChange}
-          accept="image/*"
-        />
-        Upload Image
-      </label>
+        <label className="custom-file-upload">
+          <input
+            className="fileBtn"
+            type="file"
+            onChange={onFileChange}
+            accept="image/*"
+          />
+          Upload Image
+        </label>
 
-      <button onClick={onAddEar}>Add Ear</button>
+        <button onClick={onAddEar}>Add Ear</button>
 
-      <TestCanvas onReady={onReady} />
+        <TestCanvas onReady={onReady} />
 
-      <button onClick={saveImage}>Save</button>
-      <Credit>
-        Made with 💜 by{" "}
-        <a href="https://twitter.com/berbaroovez">Berbaroovez</a>
-      </Credit>
-      <Disclaimer>(not affiliated with v1 just a NA Fan)</Disclaimer>
-    </HomeContainer>
+        <button onClick={saveImage}>Save</button>
+        <Credit>
+          Made with 💜 by{" "}
+          <a href="https://twitter.com/berbaroovez">Berbaroovez</a>
+        </Credit>
+        <Disclaimer>(not affiliated with v1 just a NA Fan)</Disclaimer>
+      </HomeContainer>
+    </>
   );
 }
 
