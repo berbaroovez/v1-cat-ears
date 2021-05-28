@@ -39,6 +39,13 @@ export default function Home() {
       editor?.canvas.add(oImg);
     });
   };
+  const onAddSnippedEar = () => {
+    fabric.Image.fromURL("snipped-ear2.png", function (oImg: any) {
+      oImg.scaleToWidth(75);
+      oImg.scaleToHeight(75);
+      editor?.canvas.add(oImg);
+    });
+  };
 
   const saveImage = () => {
     // window.open(editor?.canvas.toDataURL());
@@ -83,6 +90,7 @@ export default function Home() {
         </label>
 
         <button onClick={onAddEar}>Add Ear</button>
+        <button onClick={onAddSnippedEar}>Add Snipped Ear</button>
 
         <TestCanvas onReady={onReady} />
 
@@ -110,7 +118,7 @@ const HomeContainer = styled.div`
   justify-items: center;
   button {
     cursor: pointer;
-    margin: 12px;
+    margin-top: 4px;
     width: 200px;
 
     border: none;
